@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5B0888"
+    android:background="#610C9F"
     android:orientation="vertical"
     tools:context=".Login">
     
@@ -18,6 +18,12 @@
         android:textStyle="bold"
         android:textColor="#E5CFF7"
         android:textSize="28dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/imgps"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

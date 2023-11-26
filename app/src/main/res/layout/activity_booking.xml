@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#610C9F"
+    tools:context=".booking">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Pemesanan"
+        android:layout_margin="20dp"
+        android:textColor="#E5CFF7"
+        android:textStyle="bold"
+        android:textSize="28dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#9D76C1"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/tvPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipe PS"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+            <Spinner
+                android:layout_below="@+id/tvPS"
+                android:id="@+id/spPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@+id/spPS"
+                android:id="@+id/tvWM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Waktu Mulai"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/etJamM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWM"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@+id/btnJamM"
+                android:hint="waktu mulai" />
+
+            <ImageButton
+                android:id="@+id/btnJamM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWM"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_baseline_more_time_24" />
+            <TextView
+                android:layout_below="@+id/etJamM"
+                android:id="@+id/tvWA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Waktu Selesai"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/etJamA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWA"
+                android:layout_marginStart="20dp"
+                android:layout_toStartOf="@+id/btnJamA"
+                android:hint="waktu selesai" />
+
+            <ImageButton
+                android:id="@+id/btnJamA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWA"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_baseline_more_time_24" />
+            <TextView
+                android:id="@+id/tvth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="total harga"
+                android:layout_below="@+id/etJamA"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"/>
+            <Button
+                android:layout_below="@+id/tvth"
+                android:id="@+id/btnPesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pesan sekarang"/>
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
