@@ -28,8 +28,6 @@ public class Login extends AppCompatActivity {
 
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        etNama = findViewById(R.id.etNama);
-        etNoHP = findViewById(R.id.etNoHP);
         btnLogin = findViewById(R.id.btnLogin);
         btnRegister = findViewById(R.id.btnRegister);
 
@@ -44,13 +42,13 @@ public class Login extends AppCompatActivity {
 
                     RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
-                    StringRequest stringRequest = new StringRequest(Request.Method.GET, Db_Contract.urlLogin + "usename_cus=" + username_cus + "&password=" + password_cus, new Response.Listener<String>() {
+                    StringRequest stringRequest = new StringRequest(Request.Method.GET, Db_Contract.urlLogin + "username_cus=" + username_cus + "&password=" + password_cus, new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
                             if (response.equals("Selamat Datang")){
                                 Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
 
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(), booking.class));
 
                             }else{
                                 Toast.makeText(getApplicationContext(), "Login Gagal", Toast.LENGTH_SHORT).show();

@@ -16,9 +16,6 @@
             android:name=".booking"
             android:exported="false" />
         <activity
-            android:name=".History"
-            android:exported="false" />
-        <activity
             android:name=".Login"
             android:exported="true">
             <intent-filter>
