@@ -17,7 +17,7 @@
         android:layout_margin="20dp"
         android:textColor="#E5CFF7"
         android:textStyle="bold"
-        android:textSize="28dp"/>
+        android:textSize="20dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -60,20 +60,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nama"
                 android:minHeight="48dp" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="No HP"
-                android:layout_margin="20dp"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
 
-            <EditText
-                android:id="@+id/etNoHP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="nomor hp"
-                android:minHeight="48dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,12 +75,41 @@
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:minHeight="48dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etPertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pertanyaan"
+                android:minHeight="48dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jawaban"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etJawaban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Jawaban"
+                android:minHeight="48dp" />
 
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="register"/>
+                android:minHeight="48dp"
+                android:text="register" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

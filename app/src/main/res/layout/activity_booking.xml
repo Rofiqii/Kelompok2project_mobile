@@ -116,8 +116,17 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"/>
-            <Button
+            <TextView
+                android:id="@+id/hargaTextView"
                 android:layout_below="@+id/tvth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:layout_below="@+id/hargaTextView"
                 android:id="@+id/btnPesan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

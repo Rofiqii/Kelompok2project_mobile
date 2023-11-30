@@ -52,7 +52,7 @@
                 android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="username"
+                android:hint="Username"
                 android:minHeight="48dp" />
 
             <TextView
@@ -76,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:text="login" />
+                android:text="Login" />
 
             <Button
                 android:id="@+id/btnRegister"
@@ -85,7 +85,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="register" />
+                android:text="Register" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
