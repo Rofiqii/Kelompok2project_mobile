@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/usernameCusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/idPemesananTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameCusTextView"
+        android:layout_marginTop="8dp"
+        android:text="ID Pemesanan: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/waktuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idPemesananTextView"
+        android:layout_marginTop="8dp"
+        android:text="Waktu: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/totalHargaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waktuTextView"
+        android:layout_marginTop="8dp"
+        android:text="Total Harga: "
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/totalHargaTextView"
+        android:layout_marginTop="8dp"
+        android:text="Status: "
+        android:textStyle="bold"/>
+</RelativeLayout>

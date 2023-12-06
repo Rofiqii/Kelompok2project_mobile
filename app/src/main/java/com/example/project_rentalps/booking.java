@@ -41,7 +41,7 @@ public class booking extends AppCompatActivity {
     private EditText etJamM, etJamA;
     private ImageButton btnJamM, btnJamA;
     private TextView hargaTextView;
-    private Button btnPesan;
+    private Button btnPesan, buttonLogout, bookingButton;
     private long harga = 0;
 
     private PlayStationData.PlayStation ps;
@@ -59,6 +59,8 @@ public class booking extends AppCompatActivity {
         btnJamA = findViewById(R.id.btnJamA);
         hargaTextView = findViewById(R.id.hargaTextView);
         btnPesan = findViewById(R.id.btnPesan);
+        buttonLogout = findViewById(R.id.buttonLogout);
+        bookingButton = findViewById(R.id.booking_btn);
 
         // Setup Spinner with PS types
 //        String[] psTypes = {"PS2", "PS3", "PS3", "PS3", "PS3", "PS3", "PS3", "PS3", "PS3", "PS3", "PS5", "PS5", "PS4", "PS5"};
@@ -118,6 +120,22 @@ public class booking extends AppCompatActivity {
                 final int[] jam = {Calendar.getInstance().get(Calendar.HOUR_OF_DAY)};
                 final int[] menit = {Calendar.getInstance().get(Calendar.MINUTE)};
                 showTimePicker(etJamA, jam, menit);
+            }
+        });
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tambahkan logika logout di sini
+                logout();
+            }
+        });
+
+        bookingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(booking.this, History.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -278,7 +296,17 @@ public class booking extends AppCompatActivity {
         }
     }
 
+    private void logout() {
+        // Tambahkan logika logout di sini
+        // Misalnya, hapus informasi login dari SharedPreferences dan arahkan ke halaman login
+        // Pastikan untuk menyesuaikan dengan kebutuhan aplikasi Anda
+        Toast.makeText(this, "Logout Clicked", Toast.LENGTH_SHORT).show();
 
+        // Untuk contoh, arahkan kembali ke halaman login
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+        finish(); // Tutup activity saat ini agar pengguna tidak dapat kembali ke halaman sebelumnya
+    }
     // Placeholder methods (replace with actual implementations)
     private int getPsIdFromType(String psType) {
         // Implement this method to get the ID of the PS type from your data source

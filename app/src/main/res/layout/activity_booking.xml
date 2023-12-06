@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#610C9F"
+    android:background="#e3dbdb"
     tools:context=".booking">
 
     <TextView
@@ -15,11 +15,12 @@
         android:gravity="center"
         android:text="Pemesanan"
         android:layout_margin="20dp"
-        android:textColor="#E5CFF7"
+        android:textColor="#4a80d0"
         android:textStyle="bold"
         android:textSize="28dp"/>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -27,30 +28,35 @@
         android:elevation="10dp">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="367dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="#9D76C1"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:background="#4a80d0"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tvPS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
                 android:text="Tipe PS"
-                android:layout_margin="20dp"
-                android:textStyle="bold"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
             <Spinner
-                android:layout_below="@+id/tvPS"
                 android:id="@+id/spPS"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPS" />
 
             <TextView
-                android:layout_below="@+id/spPS"
                 android:id="@+id/tvWM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/spPS"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -58,6 +64,7 @@
                 android:text="Waktu Mulai"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/etJamM"
                 android:layout_width="match_parent"
@@ -76,11 +83,12 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_baseline_more_time_24" />
+
             <TextView
-                android:layout_below="@+id/etJamM"
                 android:id="@+id/tvWA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/etJamM"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -88,6 +96,7 @@
                 android:text="Waktu Selesai"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/etJamA"
                 android:layout_width="match_parent"
@@ -106,35 +115,52 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_baseline_more_time_24" />
+
             <TextView
                 android:id="@+id/tvth"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="total harga"
                 android:layout_below="@+id/etJamA"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp"
+                android:text="total harga" />
+
             <TextView
                 android:id="@+id/hargaTextView"
-                android:layout_below="@+id/tvth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tvth"
+                android:layout_marginTop="16dp"
                 android:text="Harga: "
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"/>
+                android:textStyle="bold" />
+
             <Button
-                android:layout_below="@+id/hargaTextView"
                 android:id="@+id/btnPesan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="pesan sekarang"/>
-
-
+                android:layout_below="@+id/hargaTextView"
+                android:text="pesan sekarang" />
 
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Logout" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/booking_btn"
+        android:text="Booking"
+        android:layout_below="@id/buttonLogout" />
 </LinearLayout>
