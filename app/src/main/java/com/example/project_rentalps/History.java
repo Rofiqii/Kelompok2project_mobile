@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -39,12 +40,15 @@ public class History extends AppCompatActivity {
     private ListView historyListView;
     private List<HistoryData> historyList;
     private RequestQueue requestQueue;
+    private Button buttonLogout, back;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-
+        buttonLogout = findViewById(R.id.buttonLogout);
+        back = findViewById(R.id.back);
         historyListView = findViewById(R.id.historyListView);
         historyList = new ArrayList<>();
         requestQueue = Volley.newRequestQueue(History.this);
@@ -62,8 +66,37 @@ public class History extends AppCompatActivity {
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
+
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tambahkan logika logout di sini
+                logout();
+            }
+        });
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start the registration activity
+                Intent intent = new Intent(History.this, booking.class);
+                startActivity(intent);
+            }
+
+        });
+
     }
 
+    private void logout() {
+        // Tambahkan logika logout di sini
+        // Misalnya, hapus informasi login dari SharedPreferences dan arahkan ke halaman login
+        // Pastikan untuk menyesuaikan dengan kebutuhan aplikasi Anda
+        Toast.makeText(this, "Logout Clicked", Toast.LENGTH_SHORT).show();
+
+        // Untuk contoh, arahkan kembali ke halaman login
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+        finish(); // Tutup activity saat ini agar pengguna tidak dapat kembali ke halaman sebelumnya
+    }
     private void displayHistoryList() {
         HistoryAdapter adapter = new HistoryAdapter(this, historyList);
         historyListView.setAdapter(adapter);

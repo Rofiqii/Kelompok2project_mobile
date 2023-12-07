@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#610C9F"
+    android:background="#e3dbdb"
     tools:context=".Register">
 
     <TextView
@@ -15,7 +15,7 @@
         android:gravity="center"
         android:text="Register"
         android:layout_margin="20dp"
-        android:textColor="#E5CFF7"
+        android:textColor="#0e5dd2"
         android:textStyle="bold"
         android:textSize="20dp"/>
 
@@ -30,7 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#9D76C1"
             android:layout_margin="10dp">
             <TextView
                 android:layout_width="match_parent"
@@ -109,7 +108,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:text="register" />
+                android:text="register"
+                android:textColor="#ffffff"
+                android:background="@drawable/buttoncollor3"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

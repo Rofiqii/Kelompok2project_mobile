@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#e3dbdb"
+    android:orientation="vertical"
     tools:context=".booking">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:text="Pemesanan"
-        android:layout_margin="20dp"
-        android:textColor="#4a80d0"
-        android:textStyle="bold"
-        android:textSize="28dp"/>
+        android:textColor="#0e5dd2"
+        android:textSize="28dp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        app:cardCornerRadius="15dp"
-        android:elevation="10dp">
+        android:elevation="10dp"
+        app:cardCornerRadius="15dp">
 
         <RelativeLayout
-            android:layout_width="367dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="#4a80d0"
             android:orientation="vertical">
 
             <TextView
@@ -43,6 +41,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Tipe PS"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -62,6 +61,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Waktu Mulai"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -94,6 +94,7 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Waktu Selesai"
+                android:textColor="#000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -131,9 +132,10 @@
                 android:id="@+id/hargaTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvth"
+                android:layout_below="@+id/btnJamA"
                 android:layout_marginTop="16dp"
                 android:text="Harga: "
+                android:textColor="#38cd12"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -142,25 +144,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/hargaTextView"
+                android:background="@drawable/buttoncollor1"
                 android:text="pesan sekarang" />
 
 
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/booking_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLogout"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="History"
+        android:background="@drawable/buttoncollor3"/>
     <Button
         android:id="@+id/buttonLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_below="@id/booking_btn"
         android:layout_marginTop="16dp"
+        android:textColor="#ffffff"
         android:gravity="center"
-        android:text="Logout" />
+        android:text="Logout"
+        android:background="@drawable/buttoncollor2"
+        />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/booking_btn"
-        android:text="Booking"
-        android:layout_below="@id/buttonLogout" />
 </LinearLayout>
